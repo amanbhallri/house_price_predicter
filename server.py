@@ -10,14 +10,9 @@ app = Flask(__name__)
 def first(): 
   return render_template('index.html') 
 
-@app.route('/r') # open the form for result prediction  
-def second(): 
-  return  render_template('result.html') 
-
-@app.route('/d') # open the form for diamond price prediction
-def diamond(): 
-  return  render_template('diamondp.html') 
-
+@app.route('/hprice')
+def hprice(): 
+  return  render_template('hprice.html') 
 
 @app.route('/hp' ) 
 def housepricepredict(): 
