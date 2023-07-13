@@ -1,49 +1,71 @@
-  <body>
-    <h1>
-      House Price Prediction in Bangalore
-    </h1>
-    <hr>
-    <form action="/hp" method="post">
-      <table border="1">
-        <tr>
-          <td> Area in Square Feet</td>
-          <td> <input type="text" name="area"> </td>
-        </tr>
-        <tr>
-          <td> Bed Room Count </td>
-          <td>    
-            <select name="bhk">              
-              <option>2</option>              
-              <option>3</option>              
-              <option>4</option>              
-              <option>5</option>              
-              <option>6</option>              
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td> Bathroom Count </td>
-          <td> 
-            <select name="bath">               
-              <option>2</option>              
-              <option>3</option>              
-              <option>4</option>              
-              <option>5</option>              
-              <option>6</option>
-            </select> 
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center">
-            <input type="submit" value="Predict the Price">
-            <input type="reset" value="Clear">
-          </td>
-        </tr>
-      </table>
-    </form>
-    {{ data}}
-    <hr>
-    <a href="/"> Home Page </a>
-    <button onclick="window.location.href='index.html'">House Price Prediction</button>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1227&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>House Price Prediction in Bangalore</h1>
+            <hr>
+            <form action="/hp" method="post">
+                <table border="1">
+                    <tr>
+                        <td>Area in Square Feet</td>
+                        <td><input type="text" name="area"></td>
+                    </tr>
+                    <tr>
+                        <td>Bed Room Count</td>
+                        <td>
+                            <select name="bhk">
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bathroom Count</td>
+                        <td>
+                            <select name="bath">
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Predict the Price">
+                            <input type="reset" value="Clear">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            {{ data }}
+            <hr>
+        </div>
+    </div>
+</body>
 </html>
